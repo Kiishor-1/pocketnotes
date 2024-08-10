@@ -41,7 +41,8 @@ const firebaseConfig = {
   projectId: import.meta.env.VITE_REACT_APP_PROJECT_ID,
   storageBucket: import.meta.env.VITE_REACT_APP_STORAGE_BUCKET,
   messagingSenderId:import.meta.env.VITE_REACT_APP_MESSAGE_SENDER_ID,
-  appId: import.meta.env.VITE_REACT_APP_MEASUREMENT_ID,
+  appId: import.meta.env.VITE_REACT_APP_APPID,
+  measurementId:import.meta.env.VITE_REACT_APP_MEASUREMENT_ID,
 };
 
 
@@ -57,5 +58,4 @@ export const setUpRecaptcha = (elementId) => {
       },
     });
   }
-
 };
