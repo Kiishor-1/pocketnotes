@@ -417,13 +417,13 @@ const UserChat = () => {
           <div>No messages</div>
         )}
       </div>
-      <p className="flex items-center self-center opacity-30 text-sm">
+      <p className="flex items-center self-center opacity-30 text-sm py-2">
         <IoMdLock />
         end-to-end encrypted
       </p>
       {isUserMember ? (
-        <div className="p-2 border-t flex items-center">
-          <input
+        <div className="p-2 border-t flex items-center bg-blue-900">
+          <textarea
             type="text"
             value={messageContent}
             onChange={(e) => setMessageContent(e.target.value)}
@@ -433,7 +433,7 @@ const UserChat = () => {
           <button
             onClick={handleSendMessage}
             disabled={messageContent.length <= 0}
-            className={`ml-2 ${messageContent.length > 0 ? 'bg-blue-500' : 'bg-blue-200'} text-white px-4 py-2 rounded`}
+            className={`ml-2 ${messageContent.length > 0 ? 'bg-blue-900 block' : 'hidden'} text-white px-4 py-2 rounded`}
           >
             <IoMdSend />
           </button>
