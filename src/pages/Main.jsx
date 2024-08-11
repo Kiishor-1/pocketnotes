@@ -59,7 +59,7 @@ export default function Main() {
         />
       </div>
       
-      <div className={`flex flex-[1] flex-col items-center justify-center gap-4 relative ${showChat ? 'block' : 'hidden sm:block sm:flex'}`}>
+      <div className={`flex flex-[1] flex-col w-full items-center justify-center gap-4 relative ${showChat ? 'block' : 'hidden sm:block sm:flex'}`}>
         <Outlet />
         {!chatStarted && <Lobby />} {/* Lobby is only shown when chat hasn't started */}
       </div>
