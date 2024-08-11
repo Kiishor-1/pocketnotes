@@ -32,13 +32,13 @@ const GroupList = ({ setChatStarted, setShowChat, showChat }) => {
   };
 
   return (
-    <div className='bg-white h-screen relative overflow-scroll hide-scrollbar'>
+    <div className='bg-white h-screen  overflow-scroll hide-scrollbar'>
       <h2 className='sticky top-0 bg-white text-center text-3xl font-semibold py-6'>
         Pocket Notes
       </h2>
       <button
         onClick={handleSettingsClick}
-        className="absolute text-2xl top-4 right-4 text-blue-600"
+        className="absolute text-2xl top-7 right-4 text-blue-600"
       >
         <IoMdSettings />
       </button>

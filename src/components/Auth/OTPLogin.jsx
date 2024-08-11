@@ -15,14 +15,13 @@ const OTPLogin = () => {
   const [otp, setOtp] = useState('');
   const [name, setName] = useState('');
   const dispatch = useDispatch();
-  const { confirmationResult, user, loading, phoneNumber: storedPhoneNumber } = useSelector(state => state.user);
-
+  const { confirmationResult, user, token, loading, phoneNumber: storedPhoneNumber } = useSelector(state => state.user);
   const navigate = useNavigate();
   useEffect(() => {
-    if (user) {
-      navigate('/');
+    if (user && token) {
+      navigate('/main');
     }
-  }, [navigate, user])
+  }, [navigate, user, token])
 
   useEffect(() => {
     setUpRecaptcha('recaptcha-container');

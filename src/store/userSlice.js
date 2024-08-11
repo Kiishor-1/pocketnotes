@@ -279,6 +279,7 @@ const userSlice = createSlice({
 
         // Navigate to the main page after logging in
         if (action.payload.user && action.payload.token) {
+          console.log('hit')
           action.meta.arg.navigate('/main');
         }
       })
@@ -298,7 +299,9 @@ const userSlice = createSlice({
         localStorage.setItem('token', action.payload.token);
 
         // Navigate to the main page after registration
-        action.meta.arg.navigate('/main');
+        if(state.user && state.token){
+          action.meta.arg.navigate('/main');
+        }
       })
       .addCase(registerUser.rejected, (state, action) => {
         state.loading = false;

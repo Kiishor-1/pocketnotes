@@ -5,12 +5,14 @@ import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 const Home = () => {
   const user = useSelector((state)=>state.user.user);
+  const token = useSelector((state)=>state.user.token);
   const navigate = useNavigate();
-  useEffect(()=>{
-    if(user){
-      navigate('/main');
-    }
-  },[navigate, user])
+  // useEffect(()=>{
+  //   console.log('Home1')
+  //   if(user ){
+  //     navigate('/main');
+  //   }
+  // },[navigate, user])
 
     return (
       <div className="home-container h-screen flex flex-col items-center relative">

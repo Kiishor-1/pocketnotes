@@ -33,7 +33,7 @@ export default function CreateModal({ onCreate, onClose }) {
         </div>
         <div className="flex gap-8 items-center">
           <h4 className="font-bold">Choose Color</h4>
-          <div className="colors flex gap-2">
+          <div className="colors flex gap-2 flex-wrap">
             {['748b86', '26d9cf', 'b84792', '9d626a', '313ece', 'ffcf00'].map(
               (color) => (
                 <div

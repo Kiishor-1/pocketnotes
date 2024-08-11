@@ -7,7 +7,6 @@ const { SEND_MESSAGE, FETCH_MESSAGES } = MESSAGE_ENDPOINTS;
 // Thunk to fetch messages for a group
 export const fetchMessages = createAsyncThunk('messages/fetchMessages', async (groupId) => {
   const response = await axios.get(`${FETCH_MESSAGES}/${groupId}`);
-  console.log(response)
   return response.data;
 });
 

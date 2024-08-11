@@ -1,4 +1,4 @@
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
@@ -7,9 +7,9 @@ import { GROUP_ENDPOINTS } from '../../services/api';
 const { GROUP_MEMBERS } = GROUP_ENDPOINTS;
 
 const GroupCard = ({ group, setChatStarted, setShowChat }) => {
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { user, token } = useSelector((state) => state.user);
+  const { user } = useSelector((state) => state.user);
   const [isMember, setIsMember] = useState(false);
 
   useEffect(() => {
