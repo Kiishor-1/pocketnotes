@@ -88,7 +88,7 @@ const OTPLogin = () => {
             inputClassName="w-[3rem] h-[3rem] text-center border-2 border-gray-300 rounded-md bg-gray-100 focus:border-blue-500 focus:outline-none"
           />
           <button onClick={handleVerifyOTP} disabled={loading} className='bg-emerald-900 p-2 rounded-md text-white'>
-            {loading ? <CgSpinner className="spinner" /> : 'Verify OTP'}
+            {loading ? <CgSpinner size={20} className='mt-1 animate-spin' /> : 'Verify OTP'}
           </button>
         </div>
       )}
