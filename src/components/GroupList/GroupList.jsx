@@ -33,7 +33,7 @@ const GroupList = ({ setChatStarted, setShowChat, showChat }) => {
 
   return (
     <div className='bg-white h-screen  overflow-scroll hide-scrollbar'>
-      <h2 className='sticky top-0 bg-white text-center text-3xl font-semibold py-6'>
+      <h2 className='sticky top-0 bg-white text-cente pl-6 text-3xl font-semibold py-6'>
         Pocket Notes
       </h2>
       <button

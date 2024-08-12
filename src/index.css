@@ -2,19 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* .react-tel-input .form-control {
-    @apply !w-full py-6 !text-base;
-}
-
-.otp-container {
-    @apply flex justify-content gap-2;
-}
-
-.otp-container input {
-    @apply !mr-0 flex-1 py-5 outline-none;
-} */
-
-/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');*/
 
 body {
   font-family: 'Roboto', sans-serif;

@@ -45,7 +45,7 @@ export default function Main() {
       {showChat && (
         <button
           onClick={handleBackToChatList}
-          className="absolute z-[2] top-7 left-2 text-2xl text-blue-600 xl:hidden" // Visible only on small screens
+          className="absolute z-[2] top-7 text-white left-2 text-2xl text-blue-600 xl:hidden" // Visible only on small screens
         >
           <BiArrowBack />
         </button>

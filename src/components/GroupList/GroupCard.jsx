@@ -40,21 +40,19 @@ const GroupCard = ({ group, setChatStarted, setShowChat }) => {
   };
 
   return (
-    <div className="flex items-center justify-evenly gap-3 my-6 cursor-pointer" onClick={handleButtonClick}>
-      <div className="flex-[2] flex justify-center">
+    <div className="flex items-center gap-4 my-6 cursor-pointer" onClick={handleButtonClick}>
+      <div className="flex justify-center">
         <div
-          className={`rounded-full h-[4rem] border-4 border-gray-300 overflow-hidden w-[4rem] flex items-center justify-center bg-${group.groupBackground}`}
-          
+          className={`rounded-full h-[4rem] border-4 border-gray-300 overflow-hidden w-[4rem] ml-3 bg-${group.groupBackground}`}
         >
           <img
-            // src={`https://api.dicebear.com/5.x/initials/svg?seed=${group.name}`}
             src={`https://ui-avatars.com/api/?background=${group.groupBackground}&color=fff&name=${group.name}`}
             alt={group.name}
             className="rounded-full text-blue-900 bg-blue-900"
           />
         </div>
       </div>
-      <div className="font-semibold flex-[3]">
+      <div className="font-semibold flex-[1]">
         {group.name}
       </div>
     </div>

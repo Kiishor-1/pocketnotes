@@ -23,17 +23,18 @@ export const joinGroup = createAsyncThunk(
   'group/joinGroup',
   async ({ groupId, token }, { rejectWithValue }) => {
     try {
-      console.log("Token is", token); // Ensure token is correct
+      // console.log("Token is", token); // Ensure token is correct
       const response = await axios.post(JOIN_GROUP(groupId), {}, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
       });
-      console.log('Join group response:', response);
+      // console.log('Join group response:', response);
       toast.success(response.data.message);
       return response.data;
     } catch (error) {
       console.error('Join group error:', error.response ? error.response.data : error.message);
+      toast.error(error.response.data.message);
       if (error.response && error.response.data) {
         return rejectWithValue(error.response.data.message);
       }
